@@ -6,32 +6,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube</title>
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script>
+
+        window.addEventListener('load', () => {
+            const close = document.querySelector('#clear');
+            close.addEventListener('click', () => { document.querySelector('#search').value = ""; })
+        })
+    </script>
 </head>
 
 <body>
     <header class="header-container">
-        <div leftside-header>
-            <img src="icons/hamburger-menu.svg">
-            <div>
-                <a href="https://www.youtube.com"><img src="icons/youtube-logo.svg"></a>
-                <div>NG</div>
+        <div class="leftside-header">
+            <img class="icon" src="icons/hamburger-menu.svg">
+            <div class="youtube-logo-container">
+                <a href="https://www.youtube.com"><img class="icon, youtube-logo" src="icons/youtube-logo.svg"></a>
+                <div class="NG">NG</div>
+                <div class="tooltip">YouTube Home</div>
+
             </div>
+
         </div>
-        <div middleside-header>
-            <input type="text" placeholder="Search">
-            <button><img src="icons/search.svg"></button>
-            <button><img src="icons/voice-search-icon.svg"></button>
+        <div class="middleside-header">
+
+            <div class="close-icon-container">
+                <input id="search" name="search" class="search-bar" type="search" placeholder="Search">
+                <svg id="clear" class="close" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false">
+                    <g class="style-scope yt-icon">
+                        <path
+                            d="M12.7,12l6.6,6.6l-0.7,0.7L12,12.7l-6.6,6.6l-0.7-0.7l6.6-6.6L4.6,5.4l0.7-0.7l6.6,6.6l6.6-6.6l0.7,0.7L12.7,12z"
+                            class="style-scope yt-icon"></path>
+                    </g>
+                </svg>
+            </div>
+
+            <button type="submit" class="search-button">
+                <img class="icon" src="icons/search.svg">
+                <div class="tooltip">Search</div>
+
+            </button>
+            <button class="voice-search-button">
+                <img class="icon, voice-btn" src="icons/voice-search-icon.svg">
+                <div class="tooltip">Search with your voice</div>
+            </button>
+
         </div>
         <div class="rightside-header">
-            <img src="icons/upload.svg">
-            <img src="icons/youtube-apps.svg">
-            <img src="icons/notifications.svg">
-            <img src="profile-pic/IMG_2200.JPG">
+            <div class="upload-icon">
+                <a href="#"><img class="icon" src="icons/upload.svg"></a>
+                <div class="tooltip">Upload</div>
+            </div>
+            <div class="youtube-apps-icon">
+                <a href="#"><img class="icon" src="icons/youtube-apps.svg"></a>
+                <div class="tooltip">YouTube Apps</div>
+            </div>
+            <div class="notification-icon">
+                <a href="#"><img class="icon" src="icons/notifications.svg"></a>
+                <div class="tooltip">Notifications</div>
+            </div>
+            <a href="#"><img class="profile-pic" src="profile-pic/IMG_2200.JPG"></a>
         </div>
-
-
     </header>
+    <p>love</p>
+    <p>heart</p>
+    <label><input type="search" placeholder="Search" name="search">search</label>
+
 </body>
 
 </html>
