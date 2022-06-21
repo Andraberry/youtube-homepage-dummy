@@ -1,0 +1,78 @@
+nav {
+  z-index: 105;
+  position: fixed;
+  width: 240px;
+  background-color: white;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  margin-top: 0;
+  overflow: auto;
+}
+.icons {
+  height: 30px;
+  padding: 0px 25px;
+}
+
+.top-part-sidebar,
+.second-part-sidebar,
+.third-part-sidebar,
+.forth-part-sidebar,
+.fifth-part-sidebar {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid gray;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+.top-part-info,
+.second-part-info,
+.third-part-info,
+.forth-part-info,
+.fifth-part-info {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 550;
+}
+.top-part-info:hover,
+.second-part-info:hover,
+.third-part-info:hover,
+.forth-part-info:hover,
+.fifth-part-info:hover {
+  background-color: rgb(212, 212, 212);
+  cursor: pointer;
+}
+
+.channel-pic {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 0px 25px;
+}
+.h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-left: 25px;
+  margin-bottom: 5px;
+  color: rgb(143, 141, 141);
+}
+.footer,
+.footer2 {
+  margin-left: 25px;
+  margin-top: 10px;
+  margin-right: 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+footer a {
+  cursor: pointer;
+}
+footer p {
+  margin-left: 25px;
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 5px;
+}
