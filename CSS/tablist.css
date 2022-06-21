@@ -1,3 +1,17 @@
+.tablist {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 12px;
+  height: 55px;
+  position: fixed;
+  right: 0;
+  left: 205px;
+  top: 61px;
+  background-color: white;
+  border-bottom: 1px solid gray;
+  align-items: center;
+  z-index: 120;
+}
 li {
   display: inline-block;
   margin: 0px 4px;
@@ -30,16 +44,26 @@ li:hover {
   height: 20px;
   margin-left: 5px;
 }
-.tablist {
+.next-icon {
+  position: relative;
+  cursor: pointer;
   display: flex;
-  justify-content: space-around;
-  margin-left: 12px;
-  height: 55px;
-  position: fixed;
-  right: 0;
-  left: 205px;
-  top: 62px;
-  background-color: white;
-  border-bottom: 1px solid gray;
   align-items: center;
+  justify-content: center;
+}
+.next-icon .tooltip {
+  position: absolute;
+  top: 25px;
+  background-color: rgba(216, 216, 216, 0.5);
+  z-index: 102;
+  padding: 4px;
+  font-size: 15px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+.next-icon:hover .tooltip {
+  opacity: 1;
 }
