@@ -20,7 +20,6 @@
 }
 .leftside-header {
   display: flex;
-  flex-shrink: 0;
   width: 180px;
   align-items: center;
   justify-content: space-around;
@@ -141,7 +140,4 @@
 .notification-icon:hover .tooltip,
 .youtube-logo-container:hover .tooltip {
   opacity: 1;
-}
-.show-close {
-  transform: translateX(0);
 }
