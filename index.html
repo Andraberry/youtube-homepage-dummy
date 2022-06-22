@@ -18,13 +18,14 @@
             const close = document.querySelector('#clear');
             close.addEventListener('click', () => { document.querySelector('#search').value = ""; })
         })
+        function buttonclick() { var menuList = document.getElementById("menu"); if (menuList.className == "menuoff") { menuList.className = "menuon"; } else { menuList.className = "menuoff"; } }
     </script>
 </head>
 
 <body>
     <header class="header-container">
         <div class="leftside-header">
-            <img class="icon" src="icons/hamburger-menu.svg">
+            <img id="btnmenu" onclick="buttonclick();" class="icon" src="icons/hamburger-menu.svg">
             <div class="youtube-logo-container">
                 <a href="https://www.youtube.com"><img class="icon, youtube-logo" src="icons/youtube-logo.svg"></a>
                 <div class="NG">NG</div>
@@ -73,7 +74,7 @@
             <a href="#"><img class="profile-pic" src="profile-pic/IMG_2200.JPG"></a>
         </div>
     </header>
-    <nav class="sidebar-container">
+    <nav id="menu" class="sidebar-container, menuoff">
         <div class="top-part-sidebar">
 
             <div class="top-part-info">
@@ -269,7 +270,7 @@
         </footer>
     </nav>
 
-    <div class="sidebar-container2 menuoff">
+    <div class="sidebar-container2">
         <div class="sidebar2">
             <img class="icons2" src="./icons/home.svg">
             <p>Home</p>
