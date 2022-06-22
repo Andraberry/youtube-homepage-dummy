@@ -10,7 +10,7 @@
   background-color: white;
   border-bottom: 1px solid gray;
   align-items: center;
-  z-index: 120;
+  z-index: 104;
 }
 li {
   display: inline-block;
@@ -21,6 +21,7 @@ li {
   font-weight: 500;
   border-radius: 15px;
   transition: background-color 0.15s;
+  cursor: pointer;
 }
 li:hover {
   background-color: rgb(207, 207, 207);
@@ -35,25 +36,43 @@ li:hover {
   font-weight: 500;
   border-radius: 15px;
 }
-.ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.top-list {
+  overflow: auto;
+  white-space: nowrap;
+  overflow-y: hidden;
+  margin-right: 30px;
 }
-.next-icons {
+.next-icons,
+.previous-icons {
   height: 20px;
-  margin-left: 5px;
+  background-color: white;
+  padding: 12px 6px;
 }
 .next-icon {
-  position: relative;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.next-icon .tooltip {
   position: absolute;
-  top: 25px;
+  bottom: 0;
+  right: 0;
+  top: 0;
+}
+.previous-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.next-icon .tooltip,
+.previous-icon .tooltip {
+  position: absolute;
+  top: 45px;
   background-color: rgba(216, 216, 216, 0.5);
   z-index: 102;
   padding: 4px;
@@ -64,6 +83,7 @@ li:hover {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
 }
-.next-icon:hover .tooltip {
+.next-icon:hover .tooltip,
+.previous-icon:hover .tooltip {
   opacity: 1;
 }
