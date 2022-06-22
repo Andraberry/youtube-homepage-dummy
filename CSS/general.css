@@ -6,4 +6,5 @@ body {
   padding-left: 260px;
   overflow: auto;
   margin-top: 70px;
+  overflow-x: hidden;
 }
